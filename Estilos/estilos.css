@@ -1,0 +1,47 @@
+/* styles.css */
+
+body {
+    background-image: url('/imagenes/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #333;
+  }
+  
+  .navbar {
+    background-color: rgba(255, 204, 0, 0.9);
+  }
+  
+  .navbar-brand img {
+    width: 250px;
+    height: 50px;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    background-color: #66bb6a; /* Verde brillante */
+    border-color: #66bb6a;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #4caf50;
+    border-color: #4caf50;
+  }
+  
+  .container {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para resaltar contenido */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .btn-block {
+    margin-bottom: 20px;
+  }
+  

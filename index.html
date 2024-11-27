@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Educativo</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <link href="/Estilos/estilos.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/imagenes/SEP.png" alt="Logo SEP">
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <select class="form-control" v-on:change="selectActivity">
+              <option value="" disabled selected>Actividades</option>
+              <option value="juego1">Juego de Reciclaje</option>
+              <!-- Aquí puedes agregar más opciones para otros juegos/actividades -->
+            </select>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contenido.html">Contenido</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div id="contenido-principal" class="container mt-4">
+      <!-- Aquí se cargará el contenido del juego -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
