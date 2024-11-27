@@ -1,11 +1,10 @@
+// main.js
 const { createApp } = Vue;
 
 createApp({
   data() {
     return {
       selectedActivity: '',
-      correctCount: 0,
-      incorrectCount: 0,
       timeLeft: 60,
       timer: null
     };
@@ -13,15 +12,23 @@ createApp({
   methods: {
     selectActivity(event) {
       this.selectedActivity = event.target.value;
+      let gameUrl = '';
       if (this.selectedActivity === 'juego1') {
-        fetch('JuegoReciclaje.html')
+        gameUrl = 'juegos/juegoReciclaje.html';
+      } else if (this.selectedActivity === 'juego2') {
+        gameUrl = 'juegos/juegoRegar.html';
+      }
+      if (gameUrl) {
+        fetch(gameUrl)
           .then(response => response.text())
           .then(data => {
             document.getElementById('contenido-principal').innerHTML = data;
-            // Vuelve a inicializar el script de arrastrar y soltar después de cargar el contenido
-            initDragAndDrop();
-            // Iniciar temporizador
-            this.startTimer();
+            if (this.selectedActivity === 'juego1') {
+              initDragAndDrop(); // Inicializa el juego de reciclaje
+            } else if (this.selectedActivity === 'juego2') {
+              initDragAndDrop(); // Inicializa el juego de regadera
+            }
+            this.startTimer(); // Iniciar temporizador
           });
       }
     },
@@ -31,7 +38,7 @@ createApp({
         document.getElementById('timer').textContent = `Tiempo: ${this.timeLeft}`;
         if (this.timeLeft === 0) {
           clearInterval(this.timer);
-          alert(`¡Tiempo terminado! Correctas: ${this.correctCount}, Incorrectas: ${this.incorrectCount}`);
+          alert('¡Tiempo terminado!');
         }
       }, 1000);
     }
