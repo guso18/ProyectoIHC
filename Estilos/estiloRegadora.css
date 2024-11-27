@@ -1,0 +1,80 @@
+/* estiloRegadera.css */
+
+/* Contenedores dispuestos horizontalmente */
+.watering-can-container, .pot-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de la regadera */
+  .watering-can {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  
+  .watering-can img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Estilo de las macetas */
+  .pot {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  
+  .pot img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  #timer {
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Media queries para dispositivos móviles */
+  @media (max-width: 768px) {
+    .watering-can, .pot {
+      width: 110px;
+      height: 110px;
+    }
+  
+    .watering-can-container, .pot-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #timer {
+      font-size: 1.2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .watering-can, .pot {
+      width: 90px;
+      height: 90px;
+    }
+  
+    #timer {
+      font-size: 1em;
+    }
+  }
+  

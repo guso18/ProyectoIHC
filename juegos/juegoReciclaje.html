@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del reciclaje</title>
+    <link href="/Estilos/estilos.css" rel="stylesheet">
+    <link href="/Estilos/estiloJuego.css" rel="stylesheet">
+</head>
+<body>
+  <div id="juego-reciclaje" class="container mt-4">
+    <div class="trash-bin-container">
+      <div class="trash-bin" id="bin-yellow" style="background-color: yellow;">
+        <img src="imagenes/contenedor-amarillo.png" alt="Contenedor Amarillo">
+      </div>
+      <div class="trash-bin" id="bin-green" style="background-color: green;">
+        <img src="imagenes/contenedor-verde.png" alt="Contenedor Verde">
+      </div>
+      <div class="trash-bin" id="bin-blue" style="background-color: blue;">
+        <img src="imagenes/contenedor-azul.png" alt="Contenedor Azul">
+      </div>
+    </div>
+    <div class="draggable-container">
+      <div class="draggable" id="plastic1" draggable="true">
+        <img src="imagenes/plastico.png" alt="Plástico 1">
+      </div>
+      <div class="draggable" id="plastic2" draggable="true">
+        <img src="imagenes/platico.png" alt="Plástico 2">
+      </div>
+      <div class="draggable" id="cans1" draggable="true">
+        <img src="imagenes/lata.jpg" alt="Lata 1">
+      </div>
+      <div class="draggable" id="cans2" draggable="true">
+        <img src="imagenes/latas.jpg" alt="Lata 2">
+      </div>
+      <div class="draggable" id="paper1" draggable="true">
+        <img src="imagenes/papel-bolsa.jpg" alt="Papel 1">
+      </div>
+      <div class="draggable" id="paper2" draggable="true">
+        <img src="imagenes/papel.jpg" alt="Papel 2">
+      </div>
+    </div>
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-12 text-center">
+       <!-- <div id="timer">Tiempo: 60</div>-->
+        <div id="score">Correctas: 0, Incorrectas: 0</div>
+      </div>
+    </div>
+  </div>
+  <script src="/scripts/juegoReciclaje.js"></script>
+</body>
+</html>
