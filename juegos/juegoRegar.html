@@ -10,22 +10,22 @@
 <body>
   <div id="juego-regadera" class="container mt-4">
     <div class="watering-can-container">
-      <div class="watering-can" id="can">
+      <div class="watering-can" id="can" onclick="selectWateringCan()">
         <img src="/imagenes/regadera.JPG" alt="Regadera">
       </div>
     </div>
     <div class="pot-container">
-      <div class="pot" id="pot1">
-        <img src="/imagenes/planta-medioseca.jpg" alt="Planta Marchita 1">
+      <div class="pot" id="pot1" onclick="waterPlant('pot1')">
+        <img src="/imagenes/planta-seca.jpg" alt="Planta Marchita 1">
       </div>
-      <div class="pot" id="pot2">
-        <img src="/imagenes/planta-seca.jpg" alt="Planta Marchita 2">
+      <div class="pot" id="pot2" onclick="waterPlant('pot2')">
+        <img src="/imagenes/planta-medioseca.jpg" alt="Planta Marchita 2">
       </div>
-      <div class="pot" id="pot3">
+      <div class="pot" id="pot3" onclick="waterPlant('pot3')">
         <img src="/imagenes/planta-seca2.jpeg" alt="Planta Marchita 3">
       </div>
     </div>
   </div>
-  <script src="/scripts/juegoRegadera.js"></script>
+  <script src="/scripts/juegoRegadera.js"></script> <!-- Asegurarse de que la ruta es correcta -->
 </body>
 </html>
